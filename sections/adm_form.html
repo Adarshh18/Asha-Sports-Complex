@@ -1,0 +1,265 @@
+<!-- ════════════════════════════════════════
+     ADMISSION FORM SECTION
+════════════════════════════════════════ -->
+<section id="apply">
+
+  <div class="bg-grid"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <canvas id="pCanvas_adm_form"></canvas>
+  <div class="sec-div"></div>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="sec-header" data-reveal>
+      <div class="sec-label"><span class="ldot"></span>Admission Form</div>
+      <h2 class="sec-title">Apply to Join <span class="hi">Asha Sports Complex</span></h2>
+      <p class="sec-desc">Complete the admission form to begin your professional sports training journey with expert coaches and world-class facilities.</p>
+    </div>
+
+    <!-- SPLIT LAYOUT -->
+    <div class="split-wrap" id="splitWrap">
+
+      <!-- ── LEFT PANEL ── -->
+      <div class="left-panel">
+        <div class="visual-card">
+          <div class="athlete-visual">
+            <div class="av-grid"></div>
+            <div class="av-ghost">ASHA</div>
+            <div class="av-ring"></div>
+
+            <!-- floating badges -->
+            <div class="stat-badge sb-1">
+              <span class="sb-dot"></span>
+              <div><div class="sb-text">500+ Athletes</div><div class="sb-sub">Active Members</div></div>
+            </div>
+            <div class="stat-badge sb-2">
+              <span class="sb-dot"></span>
+              <div><div class="sb-text">Pro Coaching</div><div class="sb-sub">20+ Coaches</div></div>
+            </div>
+            <div class="stat-badge sb-3">
+              <span class="sb-dot"></span>
+              <div><div class="sb-text">4 Programs</div><div class="sb-sub">Every level</div></div>
+            </div>
+
+            <!-- athlete SVG -->
+            <div class="av-svg-wrap">
+              <svg viewBox="0 0 160 260" xmlns="http://www.w3.org/2000/svg" fill="rgba(57,255,20,0.22)">
+                <!-- head -->
+                <circle cx="80" cy="28" r="22" stroke="rgba(57,255,20,0.6)" stroke-width="1.5" fill="rgba(57,255,20,0.15)"/>
+                <!-- body -->
+                <path d="M56 56 Q80 44 104 56 L114 130 Q96 140 80 139 Q64 140 46 130 Z" stroke="rgba(57,255,20,0.5)" stroke-width="1.5"/>
+                <!-- left arm -->
+                <path d="M56 68 L28 110 L20 106 L44 62 Z" stroke="rgba(57,255,20,0.4)" stroke-width="1"/>
+                <!-- right arm with ball -->
+                <path d="M104 68 L130 95 L136 88 L112 60 Z" stroke="rgba(57,255,20,0.4)" stroke-width="1"/>
+                <circle cx="140" cy="83" r="14" stroke="rgba(57,255,20,0.5)" stroke-width="1.5" fill="rgba(57,255,20,0.1)"/>
+                <path d="M128 78 Q140 90 152 78" stroke="rgba(57,255,20,0.3)" stroke-width="1" fill="none"/>
+                <!-- left leg -->
+                <path d="M46 130 L30 210 L44 212 L60 145" stroke="rgba(57,255,20,0.5)" stroke-width="1"/>
+                <!-- right leg -->
+                <path d="M114 130 L124 208 L110 210 L98 145" stroke="rgba(57,255,20,0.5)" stroke-width="1"/>
+                <!-- shoes -->
+                <path d="M22 210 L44 214 L42 222 L16 218 Z" fill="rgba(57,255,20,0.35)"/>
+                <path d="M110 210 L132 210 L134 220 L108 222 Z" fill="rgba(57,255,20,0.35)"/>
+                <!-- neon trim lines -->
+                <line x1="56" y1="56" x2="104" y2="56" stroke="rgba(57,255,20,0.4)" stroke-width="1"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="visual-info">
+            <div class="vi-title">Join the Elite</div>
+            <div class="vi-desc">Asha Sports Complex has trained 500+ athletes across 6 sports with professional certification and national-level exposure.</div>
+            <div class="info-list">
+              <div class="info-item">
+                <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Professional BCCI / AIFF certified coaches
+              </div>
+              <div class="info-item">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                Flexible morning & evening batch timings
+              </div>
+              <div class="info-item">
+                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Free trial session for all new applicants
+              </div>
+              <div class="info-item">
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Safe, secure & world-class facilities
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── RIGHT PANEL — FORM ── -->
+      <div class="form-panel">
+        <div class="form-title">Admission Application</div>
+        <div class="form-sub">All fields marked with * are required. We'll reach out within 24 hours.</div>
+
+        <form id="admissionForm" novalidate>
+          <div class="form-grid">
+
+            <!-- PERSONAL INFO -->
+            <div class="form-section-head field-full">
+              <span class="fsh-text">Personal Info</span>
+              <div class="fsh-line"></div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="studentName">Student Full Name *</label>
+              <input class="field-input" id="studentName" type="text" placeholder="e.g. Arjun Sharma" autocomplete="off">
+              <div class="err-msg">Please enter student's full name.</div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="parentName">Parent / Guardian Name *</label>
+              <input class="field-input" id="parentName" type="text" placeholder="e.g. Ramesh Sharma" autocomplete="off">
+              <div class="err-msg">Please enter parent/guardian name.</div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="email">Email Address *</label>
+              <input class="field-input" id="email" type="email" placeholder="you@example.com" autocomplete="off">
+              <div class="err-msg">Please enter a valid email address.</div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="phone">Phone Number *</label>
+              <input class="field-input" id="phone" type="tel" placeholder="+91 94556 01190" autocomplete="off">
+              <div class="err-msg">Please enter a valid 10-digit phone number.</div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="age">Age *</label>
+              <input class="field-input" id="age" type="number" placeholder="e.g. 14" min="5" max="40">
+              <div class="err-msg">Please enter a valid age (5–40).</div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label">Gender *</label>
+              <div class="radio-group">
+                <label class="radio-btn">
+                  <input type="radio" name="gender" value="Male">
+                  <span class="radio-indicator"></span> Male
+                </label>
+                <label class="radio-btn">
+                  <input type="radio" name="gender" value="Female">
+                  <span class="radio-indicator"></span> Female
+                </label>
+                <label class="radio-btn">
+                  <input type="radio" name="gender" value="Other">
+                  <span class="radio-indicator"></span> Other
+                </label>
+              </div>
+              <div class="err-msg" id="genderErr">Please select a gender.</div>
+            </div>
+
+            <!-- SPORTS & PROGRAM -->
+            <div class="form-section-head field-full">
+              <span class="fsh-text">Sports & Program</span>
+              <div class="fsh-line"></div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="sport">Select Sport *</label>
+              <select class="field-select" id="sport">
+                <option value="" disabled selected>Choose your sport</option>
+                <option value="cricket">🏏 Cricket</option>
+                <option value="football">⚽ Football</option>
+                <option value="basketball">🏀 Basketball</option>
+                <option value="badminton">🏸 Badminton</option>
+                <option value="volleyball">🏐 Volleyball</option>
+                <option value="athletics">🏃 Athletics</option>
+              </select>
+              <div class="err-msg">Please select a sport.</div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="program">Preferred Program *</label>
+              <select class="field-select" id="program">
+                <option value="" disabled selected>Choose a program</option>
+                <option value="beginner">Beginner Program</option>
+                <option value="intermediate">Intermediate Program</option>
+                <option value="advanced">Advanced Professional</option>
+                <option value="elite">Elite Athlete Program</option>
+              </select>
+              <div class="err-msg">Please select a training program.</div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="experience">Previous Experience</label>
+              <input class="field-input" id="experience" type="text" placeholder="e.g. 2 years school cricket">
+            </div>
+
+            <!-- CONTACT & DOCUMENTS -->
+            <div class="form-section-head field-full">
+              <span class="fsh-text">Contact & Documents</span>
+              <div class="fsh-line"></div>
+            </div>
+
+            <div class="field-group field-full">
+              <label class="field-label" for="address">Address *</label>
+              <input class="field-input" id="address" type="text" placeholder="Street, City, State">
+              <div class="err-msg">Please enter your address.</div>
+            </div>
+
+            <div class="field-group field-full">
+              <label class="field-label">Upload Documents (Optional)</label>
+              <label class="file-upload" for="fileInput">
+                <input type="file" id="fileInput" accept=".pdf,.jpg,.png" multiple>
+                <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                <div>
+                  <div class="file-text"><strong>Click to upload</strong> or drag and drop</div>
+                  <div class="file-text" style="font-size:11px;margin-top:3px">Birth certificate, ID proof — PDF, JPG, PNG</div>
+                </div>
+              </label>
+              <div id="fileName"></div>
+            </div>
+
+            <div class="field-group field-full">
+              <label class="field-label" for="message">Message / Additional Notes</label>
+              <textarea class="field-textarea" id="message" placeholder="Any specific goals, requirements, or questions..."></textarea>
+            </div>
+
+            <!-- SUBMIT -->
+            <div class="submit-wrap">
+              <button type="submit" class="submit-btn" id="submitBtn">
+                <span class="btn-text">Submit Application</span>
+                <div class="loader" id="loader"></div>
+                <svg id="btnArrow" viewBox="0 0 14 14"><line x1="2" y1="12" x2="12" y2="2"/><polyline points="5 2 12 2 12 9"/></svg>
+              </button>
+            </div>
+            <div class="form-note">🔒 Your data is 100% secure. <strong>Free trial session</strong> included with every application.</div>
+
+          </div>
+        </form>
+      </div>
+
+    </div><!-- /split -->
+  </div>
+</section>
+
+<!-- SUCCESS POPUP -->
+<div class="success-overlay" id="successOverlay">
+  <div class="success-card">
+    <div class="success-icon">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <div class="success-title">Application Submitted!</div>
+    <div class="success-msg">
+      🎉 Congratulations on taking the first step!<br>
+      Our team will contact you within 24 hours regarding your admission process and free trial session.
+    </div>
+    <button class="success-close" id="successClose">
+      Back to Website
+    </button>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════ -->

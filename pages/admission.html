@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asha Sports Complex — Admission</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/admission_section.css" />
+  <link rel="stylesheet" href="../css/admission_form.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <style>
+    body { padding-top: 76px; }
+    #admission { padding-top: 40px; }
+    #apply { padding-top: 40px; }
+    #admission, #apply { scroll-margin-top: 76px; }
+  </style>
+</head>
+<body>
+
+<header id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="Asha Sports Complex">
+        <div class="logo-icon" aria-hidden="true">
+          <img src="https://i.postimg.cc/c1XqJtZT/75452bfc089545bb986c62ba5937f44d.png" alt="Asha Sports Complex Logo" class="logo-img">
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Asha Sports Complex</span>
+          <span class="logo-tagline">Train Like a Champion</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="sports.html">Sports</a></li>
+          <li><a href="coaches.html">Coaches</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="admission.html" class="active">Admissions</a></li>
+          
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <a href="#" class="btn-book">
+          <span class="btn-shine"></span>
+          Book Now
+          <span class="btn-arrow">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+<!-- ===== ADMISSION PROCESS ===== -->
+<!-- ════════════════════════════════════════
+     ADMISSION PROCESS SECTION
+════════════════════════════════════════ -->
+<section id="admission">
+
+  <div class="bg-grid"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <canvas id="pCanvas_adm_sec"></canvas>
+  <div class="sec-div"></div>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="sec-header" data-reveal>
+      <div class="sec-label"><span class="ldot"></span>Admission Process</div>
+      <h2 class="sec-title">
+        Start Your Journey Towards<br><span class="hi">Athletic Excellence</span>
+      </h2>
+      <p class="sec-desc">
+        Follow our streamlined admission process to join professional sports training programs designed for future champions.
+      </p>
+      <div class="float-badges">
+        <span class="f-badge">Easy Admission Process</span>
+        <span class="f-badge">Professional Training Journey</span>
+        <span class="f-badge">Elite Athlete Pathway</span>
+      </div>
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="timeline-wrap" id="timelineWrap">
+      <div class="timeline-spine"></div>
+
+      <!-- ══ STEP 1 ══ -->
+      <div class="step-row from-left" data-idx="0">
+        <div class="step-card">
+          <div class="card-shine"></div>
+          <div class="card-inner">
+            <div class="card-icon-wrap">
+              <svg viewBox="0 0 24 24">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <div class="step-tag">Step 01</div>
+            <div class="card-title">Submit Application</div>
+            <div class="card-desc">Fill out the online admission form with your personal details, sports background, and preferred training program.</div>
+            <div class="card-status">
+              <span class="status-dot"></span>
+              <span class="status-text">Online — Takes 5 minutes</span>
+            </div>
+          </div>
+          <div class="conn-arrow">
+            <svg viewBox="0 0 36 14">
+              <line x1="0" y1="7" x2="30" y2="7"/>
+              <polyline points="22,2 30,7 22,12"/>
+            </svg>
+          </div>
+        </div>
+        <div class="step-node">
+          <div class="node-outer"><div class="node-num">01</div></div>
+        </div>
+        <div class="step-empty"><div class="empty-num">01</div></div>
+      </div>
+
+      <!-- ══ STEP 2 ══ -->
+      <div class="step-row from-right" data-idx="1">
+        <div class="step-empty" style="justify-content:flex-end"><div class="empty-num">02</div></div>
+        <div class="step-node">
+          <div class="node-outer"><div class="node-num">02</div></div>
+        </div>
+        <div class="step-card">
+          <div class="card-shine"></div>
+          <div class="card-inner">
+            <div class="card-icon-wrap">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"/>
+                <polygon points="10 8 16 12 10 16 10 8"/>
+              </svg>
+            </div>
+            <div class="step-tag">Step 02</div>
+            <div class="card-title">Attend Trial Session</div>
+            <div class="card-desc">Participate in a professional assessment and hands-on trial training session evaluated by certified coaches.</div>
+            <div class="card-status">
+              <span class="status-dot"></span>
+              <span class="status-text">On-ground — 60 min session</span>
+            </div>
+          </div>
+          <div class="conn-arrow">
+            <svg viewBox="0 0 36 14">
+              <line x1="0" y1="7" x2="30" y2="7"/>
+              <polyline points="22,2 30,7 22,12"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ STEP 3 ══ -->
+      <div class="step-row from-left" data-idx="2">
+        <div class="step-card">
+          <div class="card-shine"></div>
+          <div class="card-inner">
+            <div class="card-icon-wrap">
+              <svg viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div class="step-tag">Step 03</div>
+            <div class="card-title">Meet Professional Coaches</div>
+            <div class="card-desc">Interact directly with certified professional coaches, receive personalised skill evaluation and program recommendations.</div>
+            <div class="card-status">
+              <span class="status-dot"></span>
+              <span class="status-text">1-on-1 coaching consultation</span>
+            </div>
+          </div>
+          <div class="conn-arrow">
+            <svg viewBox="0 0 36 14">
+              <line x1="0" y1="7" x2="30" y2="7"/>
+              <polyline points="22,2 30,7 22,12"/>
+            </svg>
+          </div>
+        </div>
+        <div class="step-node">
+          <div class="node-outer"><div class="node-num">03</div></div>
+        </div>
+        <div class="step-empty"><div class="empty-num">03</div></div>
+      </div>
+
+      <!-- ══ STEP 4 ══ -->
+      <div class="step-row from-right" data-idx="3">
+        <div class="step-empty" style="justify-content:flex-end"><div class="empty-num">04</div></div>
+        <div class="step-node">
+          <div class="node-outer"><div class="node-num">04</div></div>
+        </div>
+        <div class="step-card">
+          <div class="card-shine"></div>
+          <div class="card-inner">
+            <div class="card-icon-wrap">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+                <path d="M9 10l2 2 4-4"/>
+              </svg>
+            </div>
+            <div class="step-tag">Step 04</div>
+            <div class="card-title">Complete Registration</div>
+            <div class="card-desc">Confirm your admission by completing required documentation, program selection, and fee formalities seamlessly.</div>
+            <div class="card-status">
+              <span class="status-dot"></span>
+              <span class="status-text">Paperwork & fee payment</span>
+            </div>
+          </div>
+          <div class="conn-arrow">
+            <svg viewBox="0 0 36 14">
+              <line x1="0" y1="7" x2="30" y2="7"/>
+              <polyline points="22,2 30,7 22,12"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ STEP 5 ══ -->
+      <div class="step-row from-left" data-idx="4">
+        <div class="step-card">
+          <div class="card-shine"></div>
+          <div class="card-inner">
+            <div class="card-icon-wrap">
+              <svg viewBox="0 0 24 24">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                <path d="M4 22h16"/>
+                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/>
+              </svg>
+            </div>
+            <div class="step-tag">Step 05</div>
+            <div class="card-title">Start Professional Training</div>
+            <div class="card-desc">Begin your elite athletic journey with structured, coach-led professional sports training programs from day one.</div>
+            <div class="card-status">
+              <span class="status-dot"></span>
+              <span class="status-text">Your champion journey begins</span>
+            </div>
+          </div>
+          <!-- no arrow on last step -->
+        </div>
+        <div class="step-node">
+          <!-- special final node -->
+          <div class="node-outer" style="border-color:var(--accent);background:rgba(57,255,20,0.08);box-shadow:0 0 30px rgba(57,255,20,0.2),0 0 60px rgba(57,255,20,0.08)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="filter:drop-shadow(0 0 6px rgba(57,255,20,.8))">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+        </div>
+        <div class="step-empty"><div class="empty-num">05</div></div>
+      </div>
+
+    </div><!-- /timeline -->
+
+    <!-- CTA AREA -->
+    <div class="cta-area" id="ctaArea">
+      <div class="cta-title">Ready to Begin Your<br><span class="hi">Athletic Journey?</span></div>
+      <div class="cta-sub">Join hundreds of athletes already training with Asha Sports Complex. Applications are open now.</div>
+      <a href="#apply" class="cta-btn">
+        Apply for Admission
+        <svg viewBox="0 0 14 14"><line x1="2" y1="12" x2="12" y2="2"/><polyline points="5 2 12 2 12 9"/></svg>
+      </a>
+      <div class="cta-note">Free trial session · <strong>No commitment required</strong> · Results from day one</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== ADMISSION FORM ===== -->
+<!-- ════════════════════════════════════════
+     ADMISSION FORM SECTION
+════════════════════════════════════════ -->
+<section id="apply">
+
+  <div class="bg-grid"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <canvas id="pCanvas_adm_form"></canvas>
+  <div class="sec-div"></div>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="sec-header" data-reveal>
+      <div class="sec-label"><span class="ldot"></span>Admission Form</div>
+      <h2 class="sec-title">Apply to Join <span class="hi">Asha Sports Complex</span></h2>
+      <p class="sec-desc">Complete the admission form to begin your professional sports training journey with expert coaches and world-class facilities.</p>
+    </div>
+
+    <!-- SPLIT LAYOUT -->
+    <div class="split-wrap" id="splitWrap">
+
+      <!-- ── LEFT PANEL ── -->
+      <div class="left-panel">
+        <div class="visual-card">
+          <div class="athlete-visual">
+            <div class="av-grid"></div>
+            <div class="av-ghost">ASHA</div>
+            <div class="av-ring"></div>
+
+            <!-- floating badges -->
+            <div class="stat-badge sb-1">
+              <span class="sb-dot"></span>
+              <div><div class="sb-text">500+ Athletes</div><div class="sb-sub">Active Members</div></div>
+            </div>
+            <div class="stat-badge sb-2">
+              <span class="sb-dot"></span>
+              <div><div class="sb-text">Pro Coaching</div><div class="sb-sub">20+ Coaches</div></div>
+            </div>
+            <div class="stat-badge sb-3">
+              <span class="sb-dot"></span>
+              <div><div class="sb-text">4 Programs</div><div class="sb-sub">Every level</div></div>
+            </div>
+
+            <!-- athlete SVG -->
+            <div class="av-svg-wrap">
+              <svg viewBox="0 0 160 260" xmlns="http://www.w3.org/2000/svg" fill="rgba(57,255,20,0.22)">
+                <!-- head -->
+                <circle cx="80" cy="28" r="22" stroke="rgba(57,255,20,0.6)" stroke-width="1.5" fill="rgba(57,255,20,0.15)"/>
+                <!-- body -->
+                <path d="M56 56 Q80 44 104 56 L114 130 Q96 140 80 139 Q64 140 46 130 Z" stroke="rgba(57,255,20,0.5)" stroke-width="1.5"/>
+                <!-- left arm -->
+                <path d="M56 68 L28 110 L20 106 L44 62 Z" stroke="rgba(57,255,20,0.4)" stroke-width="1"/>
+                <!-- right arm with ball -->
+                <path d="M104 68 L130 95 L136 88 L112 60 Z" stroke="rgba(57,255,20,0.4)" stroke-width="1"/>
+                <circle cx="140" cy="83" r="14" stroke="rgba(57,255,20,0.5)" stroke-width="1.5" fill="rgba(57,255,20,0.1)"/>
+                <path d="M128 78 Q140 90 152 78" stroke="rgba(57,255,20,0.3)" stroke-width="1" fill="none"/>
+                <!-- left leg -->
+                <path d="M46 130 L30 210 L44 212 L60 145" stroke="rgba(57,255,20,0.5)" stroke-width="1"/>
+                <!-- right leg -->
+                <path d="M114 130 L124 208 L110 210 L98 145" stroke="rgba(57,255,20,0.5)" stroke-width="1"/>
+                <!-- shoes -->
+                <path d="M22 210 L44 214 L42 222 L16 218 Z" fill="rgba(57,255,20,0.35)"/>
+                <path d="M110 210 L132 210 L134 220 L108 222 Z" fill="rgba(57,255,20,0.35)"/>
+                <!-- neon trim lines -->
+                <line x1="56" y1="56" x2="104" y2="56" stroke="rgba(57,255,20,0.4)" stroke-width="1"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="visual-info">
+            <div class="vi-title">Join the Elite</div>
+            <div class="vi-desc">Asha Sports Complex has trained 500+ athletes across 6 sports with professional certification and national-level exposure.</div>
+            <div class="info-list">
+              <div class="info-item">
+                <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Professional BCCI / AIFF certified coaches
+              </div>
+              <div class="info-item">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                Flexible morning & evening batch timings
+              </div>
+              <div class="info-item">
+                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Free trial session for all new applicants
+              </div>
+              <div class="info-item">
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Safe, secure & world-class facilities
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── RIGHT PANEL — FORM ── -->
+      <div class="form-panel">
+        <div class="form-title">Admission Application</div>
+        <div class="form-sub">All fields marked with * are required. We'll reach out within 24 hours.</div>
+
+        <form id="admissionForm" novalidate>
+          <div class="form-grid">
+
+            <!-- PERSONAL INFO -->
+            <div class="form-section-head field-full">
+              <span class="fsh-text">Personal Info</span>
+              <div class="fsh-line"></div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="studentName">Student Full Name *</label>
+              <input class="field-input" id="studentName" type="text" placeholder="e.g. Arjun Sharma" autocomplete="off">
+              <div class="err-msg">Please enter student's full name.</div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="parentName">Parent / Guardian Name *</label>
+              <input class="field-input" id="parentName" type="text" placeholder="e.g. Ramesh Sharma" autocomplete="off">
+              <div class="err-msg">Please enter parent/guardian name.</div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="email">Email Address *</label>
+              <input class="field-input" id="email" type="email" placeholder="you@example.com" autocomplete="off">
+              <div class="err-msg">Please enter a valid email address.</div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="phone">Phone Number *</label>
+              <input class="field-input" id="phone" type="tel" placeholder="+91 94556 01190" autocomplete="off">
+              <div class="err-msg">Please enter a valid 10-digit phone number.</div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="age">Age *</label>
+              <input class="field-input" id="age" type="number" placeholder="e.g. 14" min="5" max="40">
+              <div class="err-msg">Please enter a valid age (5–40).</div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label">Gender *</label>
+              <div class="radio-group">
+                <label class="radio-btn">
+                  <input type="radio" name="gender" value="Male">
+                  <span class="radio-indicator"></span> Male
+                </label>
+                <label class="radio-btn">
+                  <input type="radio" name="gender" value="Female">
+                  <span class="radio-indicator"></span> Female
+                </label>
+                <label class="radio-btn">
+                  <input type="radio" name="gender" value="Other">
+                  <span class="radio-indicator"></span> Other
+                </label>
+              </div>
+              <div class="err-msg" id="genderErr">Please select a gender.</div>
+            </div>
+
+            <!-- SPORTS & PROGRAM -->
+            <div class="form-section-head field-full">
+              <span class="fsh-text">Sports & Program</span>
+              <div class="fsh-line"></div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="sport">Select Sport *</label>
+              <select class="field-select" id="sport">
+                <option value="" disabled selected>Choose your sport</option>
+                <option value="cricket">🏏 Cricket</option>
+                <option value="football">⚽ Football</option>
+                <option value="basketball">🏀 Basketball</option>
+                <option value="badminton">🏸 Badminton</option>
+                <option value="volleyball">🏐 Volleyball</option>
+                <option value="athletics">🏃 Athletics</option>
+              </select>
+              <div class="err-msg">Please select a sport.</div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="program">Preferred Program *</label>
+              <select class="field-select" id="program">
+                <option value="" disabled selected>Choose a program</option>
+                <option value="beginner">Beginner Program</option>
+                <option value="intermediate">Intermediate Program</option>
+                <option value="advanced">Advanced Professional</option>
+                <option value="elite">Elite Athlete Program</option>
+              </select>
+              <div class="err-msg">Please select a training program.</div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="experience">Previous Experience</label>
+              <input class="field-input" id="experience" type="text" placeholder="e.g. 2 years school cricket">
+            </div>
+
+            <!-- CONTACT & DOCUMENTS -->
+            <div class="form-section-head field-full">
+              <span class="fsh-text">Contact & Documents</span>
+              <div class="fsh-line"></div>
+            </div>
+
+            <div class="field-group field-full">
+              <label class="field-label" for="address">Address *</label>
+              <input class="field-input" id="address" type="text" placeholder="Street, City, State">
+              <div class="err-msg">Please enter your address.</div>
+            </div>
+
+            <div class="field-group field-full">
+              <label class="field-label">Upload Documents (Optional)</label>
+              <label class="file-upload" for="fileInput">
+                <input type="file" id="fileInput" accept=".pdf,.jpg,.png" multiple>
+                <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                <div>
+                  <div class="file-text"><strong>Click to upload</strong> or drag and drop</div>
+                  <div class="file-text" style="font-size:11px;margin-top:3px">Birth certificate, ID proof — PDF, JPG, PNG</div>
+                </div>
+              </label>
+              <div id="fileName"></div>
+            </div>
+
+            <div class="field-group field-full">
+              <label class="field-label" for="message">Message / Additional Notes</label>
+              <textarea class="field-textarea" id="message" placeholder="Any specific goals, requirements, or questions..."></textarea>
+            </div>
+
+            <!-- SUBMIT -->
+            <div class="submit-wrap">
+              <button type="submit" class="submit-btn" id="submitBtn">
+                <span class="btn-text">Submit Application</span>
+                <div class="loader" id="loader"></div>
+                <svg id="btnArrow" viewBox="0 0 14 14"><line x1="2" y1="12" x2="12" y2="2"/><polyline points="5 2 12 2 12 9"/></svg>
+              </button>
+            </div>
+            <div class="form-note">🔒 Your data is 100% secure. <strong>Free trial session</strong> included with every application.</div>
+
+          </div>
+        </form>
+      </div>
+
+    </div><!-- /split -->
+  </div>
+</section>
+
+<!-- SUCCESS POPUP -->
+<div class="success-overlay" id="successOverlay">
+  <div class="success-card">
+    <div class="success-icon">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <div class="success-title">Application Submitted!</div>
+    <div class="success-msg">
+      🎉 Congratulations on taking the first step!<br>
+      Our team will contact you within 24 hours regarding your admission process and free trial session.
+    </div>
+    <button class="success-close" id="successClose">
+      Back to Website
+    </button>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════ -->
+
+<!-- ===== FOOTER ===== -->
+<!-- ============================================================
+       SITE FOOTER
+  ============================================================ -->
+  <footer class="site-footer" id="footer" role="contentinfo">
+
+    <div class="f-grid"      aria-hidden="true"></div>
+    <div class="f-glow-tl"  aria-hidden="true"></div>
+    <div class="f-glow-br"  aria-hidden="true"></div>
+    <div class="f-top-border" aria-hidden="true"></div>
+    <div class="f-particles" id="fParticles" aria-hidden="true"></div>
+
+    <!-- ============================================================
+         NEWSLETTER STRIP
+    ============================================================ -->
+    <div class="f-newsletter-strip">
+      <div class="f-newsletter-inner">
+        <div class="nl-text">
+          <div class="nl-badge">
+            <span class="nl-dot"></span>
+            Stay Updated
+          </div>
+          <h2 class="nl-title">Subscribe for <span>Sports Updates</span></h2>
+          <p class="nl-desc">Get updates about tournaments, admissions, training camps, and new programs straight to your inbox.</p>
+        </div>
+        <div>
+          <form class="nl-form" id="nlForm" onsubmit="return false;" aria-label="Newsletter subscription">
+            <div class="nl-input-wrap">
+              <input class="nl-input" type="email" id="nlEmail"
+                placeholder="Enter your email address"
+                aria-label="Email address" required />
+            </div>
+            <button type="submit" class="nl-btn" id="nlBtn">Subscribe</button>
+          </form>
+          <div class="nl-success" id="nlSuccess" role="alert">
+            <span>✅</span> You're subscribed! Welcome to the champion's circle.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         MAIN FOOTER COLUMNS
+    ============================================================ -->
+    <div class="f-main">
+      <div class="f-main-inner">
+
+        <!-- ── COL 1 — Brand ── -->
+        <div class="f-col sr sr-d1">
+          <div class="brand-logo-wrap">
+            <div class="brand-logo-icon" aria-hidden="true">
+              <img src="https://i.postimg.cc/c1XqJtZT/75452bfc089545bb986c62ba5937f44d.png" alt="Asha Sports Complex Logo" class="brand-logo-img">
+            </div>
+            <div>
+              <div class="brand-name">Asha Sports Complex</div>
+              <div class="brand-tagline">Train Like a Champion</div>
+            </div>
+          </div>
+
+          <p class="brand-desc">
+            A premium sports academy focused on professional coaching, elite training programs,
+            and complete athlete development — building future champions since 2019.
+          </p>
+
+          <div class="brand-sports">
+            <span class="b-sport-tag">🏏 Cricket</span>
+            <span class="b-sport-tag">⚽ Football</span>
+            <span class="b-sport-tag">🏸 Badminton</span>
+            <span class="b-sport-tag">🏀 Basketball</span>
+            <span class="b-sport-tag">🏐 Volleyball</span>
+            <span class="b-sport-tag">🏃 Athletics</span>
+          </div>
+
+          <!-- Socials -->
+          <div class="f-socials" role="list" aria-label="Social media">
+            <div class="f-social-label">Follow Us</div>
+
+            <a href="#" class="f-social-btn" role="listitem" aria-label="Instagram"
+              style="--s-color:rgba(225,48,108,.1);--s-border:rgba(225,48,108,.4);--s-glow:rgba(225,48,108,.25)" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+
+            <a href="#" class="f-social-btn" role="listitem" aria-label="Facebook"
+              style="--s-color:rgba(24,119,242,.1);--s-border:rgba(24,119,242,.4);--s-glow:rgba(24,119,242,.25)" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+
+            <a href="#" class="f-social-btn" role="listitem" aria-label="YouTube"
+              style="--s-color:rgba(255,0,0,.1);--s-border:rgba(255,0,0,.4);--s-glow:rgba(255,0,0,.22)" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M22.54 6.42A2.78 2.78 0 0 0 20.6 4.46C18.88 4 12 4 12 4s-6.88 0-8.6.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+
+            <a href="#" class="f-social-btn" role="listitem" aria-label="LinkedIn"
+              style="--s-color:rgba(10,102,194,.1);--s-border:rgba(10,102,194,.4);--s-glow:rgba(10,102,194,.25)" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+
+            <a href="https://wa.me/919455601190" class="f-social-btn" role="listitem" aria-label="WhatsApp"
+              style="--s-color:rgba(37,211,102,.1);--s-border:rgba(37,211,102,.4);--s-glow:rgba(37,211,102,.25)" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- ── COL 2 — Quick Links ── -->
+        <div class="f-col sr sr-d2">
+          <div class="f-col-label">Quick Links</div>
+          <ul class="f-links" role="list">
+            <li><a href="../index.html" role="listitem">Home</a></li>
+            <li><a href="about.html" role="listitem">About Us</a></li>
+            <li><a href="sports.html" role="listitem">Sports Programs</a></li>
+            <li><a href="coaches.html" role="listitem">Our Coaches</a></li>
+            <li><a href="sports.html" role="listitem">Training Programs</a></li>
+            <li><a href="gallery.html" role="listitem">Gallery</a></li>
+            <li><a href="../index.html#events" role="listitem">Events & Tournaments</a></li>
+            <li><a href="admission.html" role="listitem">Admission Process</a></li>
+            <li><a href="contact.html" role="listitem">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- ── COL 3 — Sports Programs ── -->
+        <div class="f-col sr sr-d3">
+          <div class="f-col-label">Sports Programs</div>
+          <ul class="f-sports-list" role="list">
+            <li>
+              <a href="#" role="listitem">
+                <span class="f-sport-icon">🏏</span>
+                Cricket Academy
+              </a>
+            </li>
+            <li>
+              <a href="#" role="listitem">
+                <span class="f-sport-icon">⚽</span>
+                Football Training
+              </a>
+            </li>
+            <li>
+              <a href="#" role="listitem">
+                <span class="f-sport-icon">🏀</span>
+                Basketball Program
+              </a>
+            </li>
+            <li>
+              <a href="#" role="listitem">
+                <span class="f-sport-icon">🏸</span>
+                Badminton Coaching
+              </a>
+            </li>
+            <li>
+              <a href="#" role="listitem">
+                <span class="f-sport-icon">🏐</span>
+                Volleyball Training
+              </a>
+            </li>
+            <li>
+              <a href="#" role="listitem">
+                <span class="f-sport-icon">🏃</span>
+                Athletics Program
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ── COL 4 — Contact Info ── -->
+        <div class="f-col sr sr-d4">
+          <div class="f-col-label">Contact Info</div>
+          <ul class="f-contact-list" role="list">
+
+            <li class="f-contact-item">
+              <div class="fci-icon" aria-hidden="true">📞</div>
+              <div class="fci-text">
+                <div class="fci-label">Call Us</div>
+                <div class="fci-main">+91 94556 01190 / +91 99181 61003</div>
+                <div class="fci-sub">Mon–Sat, 6AM–9PM</div>
+              </div>
+            </li>
+
+            <li class="f-contact-item">
+              <div class="fci-icon" aria-hidden="true">✉️</div>
+              <div class="fci-text">
+                <div class="fci-label">Email Us</div>
+                <div class="fci-main">info@ashasports.com</div>
+                <div class="fci-sub">24-hour response time</div>
+              </div>
+            </li>
+
+            <li class="f-contact-item">
+              <div class="fci-icon" aria-hidden="true">📍</div>
+              <div class="fci-text">
+                <div class="fci-label">Location</div>
+                <div class="fci-main">Lucknow, Uttar Pradesh</div>
+                <div class="fci-sub">India – 226021</div>
+              </div>
+            </li>
+
+            <li class="f-contact-item">
+              <div class="fci-icon" aria-hidden="true">🕐</div>
+              <div class="fci-text">
+                <div class="fci-label">Training Hours</div>
+                <div class="fci-main">Mon – Sat</div>
+                <div class="fci-sub">6:00 AM – 9:00 PM</div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div><!-- /f-main -->
+
+    <!-- ============================================================
+         ACHIEVEMENT STRIP
+    ============================================================ -->
+    <div class="f-achievements">
+      <div class="f-ach-inner">
+        <div class="f-ach-card sr sr-d1">
+          <div class="f-ach-num counter" data-target="500" data-suffix="+">0</div>
+          <div class="f-ach-lbl">Active Athletes</div>
+        </div>
+        <div class="f-ach-card sr sr-d2">
+          <div class="f-ach-num counter" data-target="20" data-suffix="+">0</div>
+          <div class="f-ach-lbl">Expert Coaches</div>
+        </div>
+        <div class="f-ach-card sr sr-d3">
+          <div class="f-ach-num counter" data-target="10" data-suffix="+">0</div>
+          <div class="f-ach-lbl">Sports Programs</div>
+        </div>
+        <div class="f-ach-card sr sr-d4">
+          <div class="f-ach-num counter" data-target="5" data-suffix="+ Yrs">0</div>
+          <div class="f-ach-lbl">Of Excellence</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Floating Badges ── -->
+    <div class="f-floating-badges" aria-hidden="true">
+      <div class="f-badge"><span class="fb-icon">🏆</span> Elite Sports Academy</div>
+      <div class="f-badge"><span class="fb-icon">⭐</span> Future Champions</div>
+      <div class="f-badge"><span class="fb-icon">🎯</span> Professional Coaching Hub</div>
+    </div>
+
+    <!-- ── Divider ── -->
+    <div class="f-divider-wrap" style="margin-top:40px">
+      <div class="f-divider"></div>
+    </div>
+
+    <!-- ============================================================
+         BOTTOM BAR
+    ============================================================ -->
+    <div class="f-bottom">
+      <div class="f-bottom-inner">
+
+        <div class="f-copy">
+          &copy; 2025 <span>Asha Sports Complex</span>. All Rights Reserved.<br>
+          <span style="font-size:11px;opacity:.6">Designed for Champions. Built for Excellence.</span>
+        </div>
+
+        <nav class="f-policy-links" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Refund Policy</a>
+          <a href="#">Sitemap</a>
+        </nav>
+
+        <a href="#" class="f-back-top" id="backTop" aria-label="Back to top">
+          <svg class="bt-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M7 12V2M2 6l5-4 5 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Back to Top
+        </a>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+
+<script src="../js/navbar.js"></script>
+<script>
+/* Admission Section */
+(function(){
+/* ── PARTICLES ──────────────────────────── */
+(function(){
+  const c = document.getElementById('pCanvas_adm_sec');
+  const ctx = c.getContext('2d');
+  function resize(){
+    const s = document.getElementById('admission');
+    c.width = s.offsetWidth; c.height = s.offsetHeight;
+  }
+  let pts=[];
+  function mk(){ return{ x:Math.random()*c.width, y:Math.random()*c.height, r:Math.random()*1.5+.3, vx:(Math.random()-.5)*.25, vy:-Math.random()*.45-.08, a:Math.random()*.3+.08, life:0, max:Math.random()*280+160 }; }
+  for(let i=0;i<65;i++) pts.push(mk());
+  function draw(){
+    ctx.clearRect(0,0,c.width,c.height);
+    pts.forEach((p,i)=>{
+      p.x+=p.vx; p.y+=p.vy; p.life++;
+      if(p.life>p.max||p.y<0) pts[i]=mk();
+      const fi=Math.min(p.life/60,1), fo=Math.min((p.max-p.life)/60,1);
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(57,255,20,${p.a*fi*fo})`; ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  window.addEventListener('resize',resize); resize(); draw();
+})();
+
+/* ── SCROLL REVEAL ──────────────────────── */
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting) return;
+    const el = e.target;
+    if(el.classList.contains('step-row')){
+      const i = parseInt(el.dataset.idx||0);
+      setTimeout(()=>{ el.classList.add('revealed'); }, i*150);
+    } else {
+      el.style.transition = 'opacity .8s ease, transform .8s ease';
+      el.style.opacity = '1'; el.style.transform = 'translateY(0)';
+    }
+    obs.unobserve(el);
+  });
+},{threshold:.12});
+
+document.querySelectorAll('.step-row').forEach(r => obs.observe(r));
+document.querySelectorAll('[data-reveal]').forEach(el=>{
+  el.style.opacity='0'; el.style.transform='translateY(28px)';
+  obs.observe(el);
+});
+
+/* CTA reveal */
+const ctaObs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){ e.target.classList.add('revealed'); ctaObs.unobserve(e.target); }
+  });
+},{threshold:.2});
+ctaObs.observe(document.getElementById('ctaArea'));
+
+/* ── TILT ON STEP CARDS ─────────────────── */
+document.querySelectorAll('.step-card').forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+    const r = card.getBoundingClientRect();
+    const dx = (e.clientX-r.left-r.width/2)/(r.width/2);
+    const dy = (e.clientY-r.top-r.height/2)/(r.height/2);
+    card.style.transform=`translateY(-8px) rotateX(${-dy*4}deg) rotateY(${dx*4}deg)`;
+  });
+  card.addEventListener('mouseleave',()=>{ card.style.transform=''; });
+});
+
+/* ── ANIMATED SPINE DRAW ON SCROLL ─────── */
+const spine = document.querySelector('.timeline-spine');
+const spineObs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      spine.style.transition='opacity .8s ease';
+      spine.style.opacity='1';
+      spineObs.unobserve(spine);
+    }
+  });
+},{threshold:.05});
+spine.style.opacity='0';
+spineObs.observe(spine);
+})();
+/* Admission Form */
+(function(){
+/* ── PARTICLES ────────────────────────── */
+(function(){
+  const c = document.getElementById('pCanvas_adm_form');
+  const ctx = c.getContext('2d');
+  function resize(){ const s=document.getElementById('apply'); c.width=s.offsetWidth; c.height=s.offsetHeight; }
+  let pts=[];
+  function mk(){ return{x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.5+.3,vx:(Math.random()-.5)*.25,vy:-Math.random()*.45-.06,a:Math.random()*.28+.07,life:0,max:Math.random()*280+160}; }
+  for(let i=0;i<65;i++) pts.push(mk());
+  function draw(){
+    ctx.clearRect(0,0,c.width,c.height);
+    pts.forEach((p,i)=>{
+      p.x+=p.vx; p.y+=p.vy; p.life++;
+      if(p.life>p.max||p.y<0) pts[i]=mk();
+      const fi=Math.min(p.life/60,1),fo=Math.min((p.max-p.life)/60,1);
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(57,255,20,${p.a*fi*fo})`; ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  window.addEventListener('resize',resize); resize(); draw();
+})();
+
+/* ── SCROLL REVEAL ────────────────────── */
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting) return;
+    e.target.style.transition='opacity .9s ease, transform .9s ease';
+    e.target.style.opacity='1'; e.target.style.transform='translateY(0)';
+    obs.unobserve(e.target);
+  });
+},{threshold:.07});
+
+document.querySelectorAll('[data-reveal]').forEach(el=>{ el.style.opacity='0'; el.style.transform='translateY(30px)'; obs.observe(el); });
+
+const sw = document.getElementById('splitWrap');
+const swObs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('revealed'); swObs.unobserve(e.target); } });
+},{threshold:.05});
+swObs.observe(sw);
+
+/* ── FILE INPUT ───────────────────────── */
+document.getElementById('fileInput').addEventListener('change',function(){
+  const fn = document.getElementById('fileName');
+  if(this.files.length>0){
+    fn.textContent = Array.from(this.files).map(f=>f.name).join(', ');
+  } else { fn.textContent=''; }
+});
+
+/* ── FORM VALIDATION ──────────────────── */
+function setErr(id,show){
+  const el=document.getElementById(id);
+  const group=el.closest('.field-group');
+  if(show){ el.classList.add('error'); group.classList.add('has-error'); }
+  else    { el.classList.remove('error'); group.classList.remove('has-error'); }
+}
+
+function validate(){
+  let ok=true;
+
+  // Student name
+  const sn=document.getElementById('studentName');
+  if(!sn.value.trim()){ setErr('studentName',true); ok=false; } else setErr('studentName',false);
+
+  // Parent name
+  const pn=document.getElementById('parentName');
+  if(!pn.value.trim()){ setErr('parentName',true); ok=false; } else setErr('parentName',false);
+
+  // Email
+  const em=document.getElementById('email');
+  const emailRx=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if(!emailRx.test(em.value.trim())){ setErr('email',true); ok=false; } else setErr('email',false);
+
+  // Phone
+  const ph=document.getElementById('phone');
+  const phClean=ph.value.replace(/\D/g,'');
+  if(phClean.length<10){ setErr('phone',true); ok=false; } else setErr('phone',false);
+
+  // Age
+  const ag=document.getElementById('age');
+  const agV=parseInt(ag.value);
+  if(!agV||agV<5||agV>40){ setErr('age',true); ok=false; } else setErr('age',false);
+
+  // Gender
+  const gChecked=document.querySelector('input[name="gender"]:checked');
+  const gErrMsg=document.getElementById('genderErr');
+  if(!gChecked){ gErrMsg.style.display='block'; ok=false; } else gErrMsg.style.display='none';
+
+  // Sport
+  const sp=document.getElementById('sport');
+  if(!sp.value){ setErr('sport',true); ok=false; } else setErr('sport',false);
+
+  // Program
+  const pr=document.getElementById('program');
+  if(!pr.value){ setErr('program',true); ok=false; } else setErr('program',false);
+
+  // Address
+  const ad=document.getElementById('address');
+  if(!ad.value.trim()){ setErr('address',true); ok=false; } else setErr('address',false);
+
+  return ok;
+}
+
+/* Live validation on blur */
+['studentName','parentName','email','phone','age','sport','program','address'].forEach(id=>{
+  document.getElementById(id).addEventListener('blur',()=>validate());
+});
+
+/* ── FORM SUBMIT ──────────────────────── */
+document.getElementById('admissionForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  if(!validate()) return;
+
+  // Loading state
+  const btn=document.getElementById('submitBtn');
+  const txt=btn.querySelector('.btn-text');
+  const ldr=document.getElementById('loader');
+  const arr=document.getElementById('btnArrow');
+  txt.textContent='Submitting...';
+  ldr.style.display='block';
+  arr.style.display='none';
+  btn.style.pointerEvents='none';
+
+  // Send via Web3Forms
+  const gender = (document.querySelector('input[name="gender"]:checked') || {}).value || 'Not specified';
+  const fileInput = document.getElementById('fileInput');
+
+  function doSubmit(fileInfo) {
+    const payload = {
+      access_key:   '98766009-143f-481b-8688-dd4d6a4bf026',
+      subject:      'New Admission Application — ' + document.getElementById('studentName').value.trim(),
+      from_name:    'Asha Sports Complex Website',
+      'Student Name':  document.getElementById('studentName').value.trim(),
+      'Parent Name':   document.getElementById('parentName').value.trim(),
+      'Email':         document.getElementById('email').value.trim(),
+      'Phone':         document.getElementById('phone').value.trim(),
+      'Age':           document.getElementById('age').value.trim(),
+      'Gender':        gender,
+      'Sport':         document.getElementById('sport').value,
+      'Program':       document.getElementById('program').value,
+      'Experience':    document.getElementById('experience').value.trim() || 'Not provided',
+      'Address':       document.getElementById('address').value.trim(),
+      'Message':       document.getElementById('message').value.trim() || 'None',
+      'Uploaded Document': fileInfo
+    };
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(function(res){ return res.json(); })
+    .then(function(data){
+      txt.textContent='Submit Application';
+      ldr.style.display='none';
+      arr.style.display='';
+      btn.style.pointerEvents='';
+      if(data.success){
+        document.getElementById('successOverlay').classList.add('show');
+        document.getElementById('admissionForm').reset();
+        document.getElementById('fileName').textContent='';
+      } else {
+        alert('Submission failed. Please try again.\n' + (data.message || ''));
+      }
+    })
+    .catch(function(){
+      txt.textContent='Submit Application';
+      ldr.style.display='none';
+      arr.style.display='';
+      btn.style.pointerEvents='';
+      alert('Network error. Please check your connection and try again.');
+    });
+  }
+
+  // If file uploaded, read its name + size info and include in submission
+  if (fileInput.files.length > 0) {
+    var filesInfo = Array.from(fileInput.files).map(function(f){
+      return f.name + ' (' + (f.size > 1024*1024 ? (f.size/1024/1024).toFixed(2)+' MB' : (f.size/1024).toFixed(1)+' KB') + ')';
+    }).join(', ');
+    doSubmit('File uploaded by user: ' + filesInfo + ' — Please ask the applicant to email the document directly to aadarshkumart.18@gmail.com if needed.');
+  } else {
+    doSubmit('No document uploaded');
+  }
+});
+
+/* ── SUCCESS CLOSE ────────────────────── */
+document.getElementById('successClose').addEventListener('click',()=>{
+  document.getElementById('successOverlay').classList.remove('show');
+});
+document.getElementById('successOverlay').addEventListener('click',function(e){
+  if(e.target===this) this.classList.remove('show');
+});
+
+/* ── TILT ON FORM PANEL ───────────────── */
+const fp=document.querySelector('.form-panel');
+fp.addEventListener('mousemove',e=>{
+  const r=fp.getBoundingClientRect();
+  const dx=(e.clientX-r.left-r.width/2)/(r.width/2);
+  const dy=(e.clientY-r.top-r.height/2)/(r.height/2);
+  fp.style.transform=`perspective(1200px) rotateX(${-dy*1.5}deg) rotateY(${dx*1.5}deg)`;
+});
+fp.addEventListener('mouseleave',()=>{ fp.style.transform=''; });
+})();
+</script>
+<script src="../js/footer.js"></script>
+</body>
+</html>

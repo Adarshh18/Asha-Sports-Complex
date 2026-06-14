@@ -1,0 +1,499 @@
+
+    /* ============================================================
+       CSS VARIABLES
+    ============================================================ */
+    :root {
+      --bg-primary:    #0B0F19;
+      --bg-secondary:  #111827;
+      --accent:        #39FF14;
+      --accent-dim:    rgba(57,255,20,0.10);
+      --accent-glow:   rgba(57,255,20,0.50);
+      --text:          #FFFFFF;
+      --text-muted:    #9CA3AF;
+      --glass-bg:      rgba(255,255,255,0.04);
+      --glass-border:  rgba(255,255,255,0.08);
+      --glass-border-a:rgba(57,255,20,0.20);
+      --ease:          cubic-bezier(0.4,0,0.2,1);
+      --ease-spring:   cubic-bezier(0.34,1.56,0.64,1);
+      --ease-out:      cubic-bezier(0,0,0.2,1);
+    }
+
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family:'Poppins',sans-serif;
+      background:var(--bg-primary);
+      color:var(--text);
+      overflow-x:hidden;
+    }
+
+    /* ============================================================
+       SECTION WRAPPER
+    ============================================================ */
+    .events {
+      position:relative;
+      padding:130px 0 150px;
+      overflow:hidden;
+      background:var(--bg-primary);
+    }
+
+    /* ── Background system ── */
+    .ev-grid {
+      position:absolute; inset:0; z-index:0;
+      background-image:
+        linear-gradient(rgba(57,255,20,0.026) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(57,255,20,0.026) 1px, transparent 1px);
+      background-size:60px 60px;
+      mask-image:radial-gradient(ellipse 90% 80% at 50% 50%, black 20%, transparent 100%);
+    }
+
+    .ev-glow-tl {
+      position:absolute; z-index:0; top:-8%; left:-8%;
+      width:55vw; height:55vw; max-width:680px; max-height:680px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(57,255,20,0.07) 0%, transparent 70%);
+      filter:blur(80px);
+      animation:gDrift 14s ease-in-out infinite alternate;
+    }
+    .ev-glow-br {
+      position:absolute; z-index:0; bottom:-5%; right:-5%;
+      width:48vw; height:48vw; max-width:600px; max-height:600px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(57,255,20,0.055) 0%, transparent 70%);
+      filter:blur(90px);
+      animation:gDrift 16s 3s ease-in-out infinite alternate-reverse;
+    }
+    @keyframes gDrift {
+      from{transform:translate(0,0) scale(1)}
+      to  {transform:translate(4%,6%) scale(1.12)}
+    }
+
+    /* Vertical connector line at top */
+    .ev-connector {
+      position:absolute; top:0; left:50%; transform:translateX(-50%);
+      width:1px; height:130px;
+      background:linear-gradient(to bottom, transparent, var(--accent), transparent);
+      opacity:.3; z-index:2;
+    }
+
+    /* Bottom divider */
+    .ev-bottom-line {
+      position:absolute; bottom:0; left:50%; transform:translateX(-50%);
+      width:80%; max-width:900px; height:1px;
+      background:linear-gradient(90deg,transparent,rgba(57,255,20,.2),transparent);
+      z-index:3;
+    }
+
+    /* Floating particles */
+    .ev-particles { position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none; }
+    .ev-particle {
+      position:absolute;
+      width:var(--sz,2px); height:var(--sz,2px);
+      border-radius:50%; background:var(--accent); opacity:0;
+      animation:pFloat var(--dur,10s) var(--dl,0s) linear infinite;
+    }
+    @keyframes pFloat {
+      0%  {transform:translateY(100vh) translateX(0); opacity:0;}
+      10% {opacity:.45;}
+      90% {opacity:.15;}
+      100%{transform:translateY(-10vh) translateX(var(--dx,20px)); opacity:0;}
+    }
+
+    /* ============================================================
+       INNER LAYOUT
+    ============================================================ */
+    .ev-inner {
+      position:relative; z-index:3;
+      max-width:1320px; margin:0 auto;
+      padding:0 28px;
+    }
+
+    /* ============================================================
+       SECTION HEADER
+    ============================================================ */
+    .ev-header {
+      text-align:center; margin-bottom:70px;
+      opacity:0; transform:translateY(30px);
+      transition:opacity .7s var(--ease-out), transform .7s var(--ease-out);
+    }
+    .ev-header.revealed { opacity:1; transform:translateY(0); }
+
+    .ev-label {
+      display:inline-flex; align-items:center; gap:12px;
+      font-size:11px; font-weight:600; letter-spacing:3.5px; text-transform:uppercase;
+      color:var(--accent); margin-bottom:20px;
+    }
+    .ev-label-line {
+      width:28px; height:2px; background:var(--accent);
+      border-radius:99px; box-shadow:0 0 8px var(--accent-glow);
+    }
+
+    .ev-heading {
+      font-family:'Bebas Neue',cursive;
+      font-size:clamp(44px,5.5vw,82px);
+      line-height:.95; letter-spacing:2px; margin-bottom:20px;
+    }
+    .eh-white  { color:var(--text); display:block; }
+    .eh-accent {
+      display:block;
+      background:linear-gradient(90deg,var(--accent),#b4ff8c 55%,var(--accent));
+      background-size:200% auto;
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+      animation:shimmer 4s linear infinite;
+    }
+    @keyframes shimmer { to{background-position:200% center} }
+
+    .ev-desc {
+      font-size:15px; font-weight:400; line-height:1.75; color:var(--text-muted);
+      max-width:580px; margin:0 auto 36px;
+    }
+
+    /* Live indicator strip */
+    .ev-live-strip {
+      display:inline-flex; align-items:center; gap:10px;
+      padding:8px 20px; border-radius:99px;
+      background:rgba(57,255,20,0.08); border:1px solid rgba(57,255,20,.25);
+      font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase;
+      color:var(--accent);
+    }
+    .live-dot {
+      width:7px; height:7px; border-radius:50%;
+      background:var(--accent); box-shadow:0 0 10px var(--accent-glow);
+      animation:blink 1.6s ease-in-out infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(.7)} }
+
+    /* ============================================================
+       EVENTS GRID
+    ============================================================ */
+    .ev-grid-layout {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px;
+    }
+
+    /* Featured card spans 2 columns (first card) */
+    .ev-card.featured {
+      grid-column:span 2;
+    }
+
+    /* ============================================================
+       EVENT CARD
+    ============================================================ */
+    .ev-card {
+      position:relative; border-radius:20px; overflow:hidden;
+      background:var(--bg-secondary);
+      border:1px solid var(--glass-border);
+      display:flex; flex-direction:column;
+      transition:transform .4s var(--ease-spring),
+                 box-shadow .4s var(--ease),
+                 border-color .4s var(--ease);
+      opacity:0; transform:translateY(40px) scale(.97);
+      cursor:pointer;
+    }
+    .ev-card.revealed { opacity:1; transform:translateY(0) scale(1); }
+
+    .ev-card:hover {
+      transform:translateY(-10px) scale(1.012) !important;
+      border-color:var(--glass-border-a);
+      box-shadow:
+        0 0 40px rgba(57,255,20,.12),
+        0 24px 60px rgba(0,0,0,.6),
+        inset 0 1px 0 rgba(255,255,255,.05);
+    }
+
+    /* Animated border glow on hover */
+    .ev-card::before {
+      content:''; position:absolute; inset:-1px; border-radius:21px;
+      background:linear-gradient(135deg,
+        transparent 20%,
+        rgba(57,255,20,.3) 50%,
+        transparent 80%);
+      background-size:200% 200%;
+      opacity:0; z-index:0;
+      transition:opacity .4s var(--ease);
+      pointer-events:none;
+    }
+    .ev-card:hover::before {
+      opacity:1;
+      animation:borderScan 2s linear infinite;
+    }
+    @keyframes borderScan {
+      0%  {background-position:200% 0}
+      100%{background-position:-200% 0}
+    }
+
+    /* Featured card special glow */
+    .ev-card.featured {
+      border-color:rgba(57,255,20,.22);
+      box-shadow:0 0 30px rgba(57,255,20,.08), 0 20px 50px rgba(0,0,0,.5);
+    }
+    .ev-card.featured:hover {
+      box-shadow:
+        0 0 60px rgba(57,255,20,.18),
+        0 30px 70px rgba(0,0,0,.65),
+        inset 0 1px 0 rgba(255,255,255,.07);
+    }
+
+    /* ── Banner Area ── */
+    .card-banner {
+      position:relative; width:100%;
+      height:200px; overflow:hidden;
+      flex-shrink:0;
+    }
+    .ev-card.featured .card-banner { height:260px; }
+
+    .banner-inner {
+      width:100%; height:100%;
+      display:flex; align-items:center; justify-content:center;
+      position:relative; overflow:hidden;
+      background:linear-gradient(145deg, rgba(17,24,39,.9), rgba(11,15,25,.95));
+      transition:transform .5s var(--ease);
+    }
+    .ev-card:hover .banner-inner { transform:scale(1.06); }
+
+    /* Grid lines inside banner */
+    .banner-inner::before {
+      content:''; position:absolute; inset:0;
+      background-image:
+        linear-gradient(rgba(57,255,20,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(57,255,20,.04) 1px, transparent 1px);
+      background-size:24px 24px;
+    }
+
+    /* Radial spotlight */
+    .banner-inner::after {
+      content:''; position:absolute; inset:0;
+      background:radial-gradient(ellipse 65% 55% at 50% 50%,
+        var(--card-color,rgba(57,255,20,0.12)) 0%, transparent 70%);
+      transition:opacity .4s;
+    }
+    .ev-card:hover .banner-inner::after { opacity:1.6; }
+
+    /* Sport emoji */
+    .banner-icon {
+      font-size:80px; line-height:1;
+      position:relative; z-index:1;
+      filter:drop-shadow(0 0 22px var(--card-color,rgba(57,255,20,.5)));
+      transition:transform .4s var(--ease-spring), filter .4s;
+      animation:iconBob 5s ease-in-out infinite;
+    }
+    @keyframes iconBob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+    .ev-card:hover .banner-icon {
+      transform:translateY(-8px) scale(1.18) rotate(-6deg);
+      filter:drop-shadow(0 0 36px var(--card-color,rgba(57,255,20,.75)));
+    }
+
+    /* Category badge — top left */
+    .card-cat-badge {
+      position:absolute; top:14px; left:14px; z-index:2;
+      padding:5px 12px; border-radius:99px;
+      background:rgba(11,15,25,.85); backdrop-filter:blur(8px);
+      border:1px solid var(--badge-color,rgba(57,255,20,.3));
+      font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase;
+      color:var(--badge-text,var(--accent));
+    }
+
+    /* Status badge — top right */
+    .card-status {
+      position:absolute; top:14px; right:14px; z-index:2;
+      padding:5px 12px; border-radius:99px;
+      font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;
+      display:flex; align-items:center; gap:5px;
+    }
+    .card-status.upcoming   { background:rgba(57,255,20,.12); border:1px solid rgba(57,255,20,.3); color:var(--accent); }
+    .card-status.live       { background:rgba(255,60,60,.12); border:1px solid rgba(255,60,60,.3); color:#ff4444; }
+    .card-status.limited    { background:rgba(255,200,0,.1);  border:1px solid rgba(255,200,0,.3); color:#ffc800; }
+    .card-status.featured-b { background:rgba(57,255,20,.15); border:1px solid rgba(57,255,20,.4); color:var(--accent); }
+    .status-dot { width:5px; height:5px; border-radius:50%; background:currentColor; animation:blink 1.4s infinite; }
+
+    /* Bottom gradient overlay */
+    .banner-overlay {
+      position:absolute; bottom:0; left:0; right:0; height:70px;
+      background:linear-gradient(to bottom, transparent, var(--bg-secondary));
+      z-index:1; pointer-events:none;
+    }
+
+    /* ── Card Body ── */
+    .card-body {
+      position:relative; z-index:2;
+      padding:22px 24px 24px;
+      display:flex; flex-direction:column; gap:14px;
+      flex:1;
+    }
+
+    /* Title + desc */
+    .card-title {
+      font-family:'Bebas Neue',cursive;
+      font-size:28px; letter-spacing:2.5px; color:var(--text); line-height:1.05;
+      transition:color .25s;
+    }
+    .ev-card.featured .card-title { font-size:36px; }
+    .ev-card:hover .card-title { color:var(--accent); }
+
+    .card-desc {
+      font-size:13px; font-weight:400; line-height:1.7; color:var(--text-muted);
+    }
+
+    /* Info row */
+    .card-info {
+      display:flex; flex-wrap:wrap; gap:8px;
+    }
+    .info-chip {
+      display:flex; align-items:center; gap:5px;
+      padding:5px 11px; border-radius:8px;
+      background:var(--glass-bg); border:1px solid var(--glass-border);
+      font-size:10px; font-weight:500; letter-spacing:.5px; color:var(--text-muted);
+      transition:border-color .25s, color .25s;
+    }
+    .info-chip-icon { font-size:11px; }
+    .ev-card:hover .info-chip { border-color:rgba(57,255,20,.2); color:var(--text); }
+
+    /* Card sep */
+    .card-sep {
+      height:1px;
+      background:linear-gradient(90deg, rgba(57,255,20,.15), transparent);
+    }
+
+    /* ── Countdown Timer ── */
+    .card-countdown {
+      display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+    }
+    .countdown-label {
+      font-size:9px; font-weight:600; letter-spacing:2px; text-transform:uppercase;
+      color:var(--text-muted); margin-right:4px;
+    }
+    .countdown-units {
+      display:flex; align-items:center; gap:6px;
+    }
+    .cd-unit {
+      display:flex; flex-direction:column; align-items:center;
+      min-width:42px; padding:7px 8px; border-radius:9px;
+      background:rgba(57,255,20,0.06); border:1px solid rgba(57,255,20,.18);
+      transition:box-shadow .3s;
+    }
+    .ev-card:hover .cd-unit {
+      box-shadow:0 0 14px rgba(57,255,20,.2);
+    }
+    .cd-num {
+      font-family:'Bebas Neue',cursive; font-size:22px; letter-spacing:1px;
+      color:var(--accent); line-height:1;
+      text-shadow:0 0 14px var(--accent-glow);
+    }
+    .cd-lbl {
+      font-size:8px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase;
+      color:var(--text-muted); margin-top:2px;
+    }
+    .cd-sep {
+      font-family:'Bebas Neue',cursive; font-size:22px; color:rgba(57,255,20,.4);
+      margin-bottom:8px;
+    }
+
+    /* ── Register button ── */
+    .card-cta-row {
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      flex-wrap:wrap; margin-top:auto;
+    }
+
+    .btn-register {
+      position:relative; display:inline-flex; align-items:center; gap:8px;
+      padding:11px 24px; border-radius:10px;
+      background:var(--accent); color:var(--bg-primary);
+      font-family:'Poppins',sans-serif; font-size:12px;
+      font-weight:700; letter-spacing:1.2px; text-transform:uppercase;
+      text-decoration:none; border:none; cursor:pointer; overflow:hidden;
+      transition:transform .2s var(--ease-spring), box-shadow .3s var(--ease);
+      box-shadow:0 0 22px rgba(57,255,20,.35), 0 4px 16px rgba(0,0,0,.4);
+    }
+    @property --angle { syntax:'<angle>'; inherits:false; initial-value:0deg; }
+    @keyframes rotateBorder { to{--angle:360deg} }
+    .btn-register::before {
+      content:''; position:absolute; inset:-2px; border-radius:12px;
+      background:conic-gradient(from var(--angle,0deg),var(--accent) 0%,transparent 30%,transparent 70%,var(--accent) 100%);
+      z-index:-1; opacity:0; transition:opacity .3s;
+      animation:rotateBorder 2.5s linear infinite;
+    }
+    .btn-register::after { content:''; position:absolute; inset:0; background:var(--accent); border-radius:10px; z-index:-1; }
+    .btn-register:hover { transform:translateY(-2px) scale(1.04); box-shadow:0 0 40px rgba(57,255,20,.6),0 8px 24px rgba(0,0,0,.4); }
+    .btn-register:hover::before { opacity:1; }
+    .btn-reg-shine {
+      position:absolute; top:-50%; left:-75%; width:50%; height:200%;
+      background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);
+      transform:skewX(-20deg); transition:left .5s var(--ease); pointer-events:none;
+    }
+    .btn-register:hover .btn-reg-shine { left:150%; }
+    .btn-reg-arrow { transition:transform .25s var(--ease-spring); }
+    .btn-register:hover .btn-reg-arrow { transform:translateX(4px); }
+
+    .slots-info {
+      font-size:11px; font-weight:500; color:var(--text-muted); line-height:1.5;
+      text-align:right;
+    }
+    .slots-info strong { color:var(--accent); }
+
+    /* ── Featured badge ribbon ── */
+    .featured-ribbon {
+      position:absolute; top:18px; left:50%; transform:translateX(-50%);
+      z-index:10;
+      padding:6px 18px; border-radius:99px;
+      background:linear-gradient(90deg,rgba(57,255,20,.15),rgba(57,255,20,.08));
+      border:1px solid rgba(57,255,20,.4);
+      font-size:9px; font-weight:700; letter-spacing:3px; text-transform:uppercase;
+      color:var(--accent); white-space:nowrap;
+      animation:ribbonPulse 3s ease-in-out infinite;
+      pointer-events:none;
+    }
+    @keyframes ribbonPulse {
+      0%,100%{box-shadow:0 0 10px rgba(57,255,20,.2)} 50%{box-shadow:0 0 24px rgba(57,255,20,.45)}
+    }
+
+    /* ============================================================
+       FLOATING PROMO BADGES (ambient)
+    ============================================================ */
+    .ev-promo-badges {
+      position:absolute; z-index:4; right:20px; top:50%;
+      transform:translateY(-50%);
+      display:flex; flex-direction:column; gap:12px;
+      pointer-events:none;
+    }
+    .promo-badge {
+      background:rgba(17,24,39,.82); backdrop-filter:blur(12px);
+      border:1px solid rgba(57,255,20,.22); border-radius:12px;
+      padding:12px 16px; text-align:center;
+      box-shadow:0 8px 28px rgba(0,0,0,.5), 0 0 16px rgba(57,255,20,.06);
+      animation:pbFloat 6s ease-in-out infinite;
+    }
+    .promo-badge:nth-child(2) { animation-delay:2s; }
+    .promo-badge:nth-child(3) { animation-delay:4s; }
+    @keyframes pbFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .pb-dot { width:7px; height:7px; border-radius:50%; background:var(--accent); box-shadow:0 0 8px var(--accent-glow); margin:0 auto 6px; animation:blink 2s infinite; }
+    .pb-title { font-family:'Bebas Neue',cursive; font-size:14px; letter-spacing:1.5px; color:var(--text); }
+    .pb-sub   { font-size:9px; font-weight:500; letter-spacing:1.5px; text-transform:uppercase; color:var(--text-muted); margin-top:2px; }
+
+    /* ============================================================
+       SCROLL REVEAL UTILITY
+    ============================================================ */
+    .sr { opacity:0; transform:translateY(28px); transition:opacity .7s var(--ease-out),transform .7s var(--ease-out); }
+    .sr.revealed { opacity:1; transform:translateY(0); }
+    .sr-d1{transition-delay:.1s} .sr-d2{transition-delay:.2s} .sr-d3{transition-delay:.3s}
+    .sr-d4{transition-delay:.4s} .sr-d5{transition-delay:.5s} .sr-d6{transition-delay:.6s}
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media(max-width:1100px) {
+      .ev-grid-layout { grid-template-columns:repeat(2,1fr); }
+      .ev-card.featured { grid-column:span 2; }
+      .ev-promo-badges  { display:none; }
+    }
+    @media(max-width:700px) {
+      .events { padding:80px 0 100px; }
+      .ev-inner { padding:0 16px; }
+      .ev-grid-layout { grid-template-columns:1fr; }
+      .ev-card.featured { grid-column:span 1; }
+      .ev-card.featured .card-banner { height:200px; }
+      .ev-card.featured .card-title  { font-size:28px; }
+      .card-cta-row { flex-direction:column; align-items:flex-start; }
+      .slots-info { text-align:left; }
+    }
+  
