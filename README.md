@@ -14,15 +14,15 @@
 <p>
   <img src="https://img.shields.io/badge/Status-Live%20%26%20Active-39FF14?style=for-the-badge&logo=statuspage&logoColor=black" />
   <img src="https://img.shields.io/badge/Est.-2019-0d1117?style=for-the-badge&logo=calendar&logoColor=39FF14&labelColor=0d1117&color=39FF14" />
-  <img src="https://img.shields.io/badge/Location-Hazaribagh%2C%20Jharkhand-0d1117?style=for-the-badge&logo=googlemaps&logoColor=39FF14&labelColor=0d1117&color=39FF14" />
+  <img src="https://img.shields.io/badge/Location-JB%20Lawn%2C%20Jankipuram%2C%20Lucknow-0d1117?style=for-the-badge&logo=googlemaps&logoColor=39FF14&labelColor=0d1117&color=39FF14" />
   <img src="https://img.shields.io/badge/Students-500%2B-39FF14?style=for-the-badge&logo=users&logoColor=black" />
 </p>
 
 <p>
   <a href="https://ashasports.com/" target="_blank">
-    <img src="https://img.shields.io/badge/🚀%20Live%20Demo-asha--sports--complex.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+    <img src="https://img.shields.io/badge/🚀%20Live%20Demo-ashasports.com-000000?style=for-the-badge&logo=googlechrome&logoColor=white" />
   </a>
-  <img src="https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+  <img src="https://img.shields.io/badge/Domain-ashasports.com-000000?style=for-the-badge&logo=googlechrome&logoColor=white" />
   <img src="https://img.shields.io/badge/Deployment-Active-39FF14?style=for-the-badge&logo=checkmarx&logoColor=black" />
 </p>
 
@@ -58,7 +58,7 @@
 
 </div>
 
-> **Asha Sports Complex** is a **premium multi-sport training academy** located in Hazaribagh, Jharkhand (Est. 2019). We offer world-class coaching, modern infrastructure, and professional training programs for **cricket, football, badminton, basketball, volleyball, and athletics** — engineered to build champions from grassroots to elite level.
+> **Asha Sports Complex** is a **premium multi-sport training academy** located at JB Lawn, Jankipuram, Lucknow (Est. 2019). We offer world-class coaching, modern infrastructure, and professional training programs for **cricket, football, badminton, basketball, volleyball, and athletics** — engineered to build champions from grassroots to elite level.
 
 ```
   ╔══════════════════════════════════════════════════════════════════╗
@@ -67,7 +67,7 @@
   ║   🏏 Cricket    ⚽ Football    🏸 Badminton    🏀 Basketball      ║
   ║   🏐 Volleyball    🏃 Athletics    + More Sports                 ║
   ║                                                                  ║
-  ║   📍 Hazaribagh, Jharkhand    |    Est. 2019    |    500+ Alumni ║
+  ║   📍 JB Lawn, Jankipuram, Lucknow |  Est. 2019  |  500+ Alumni ║
   ╚══════════════════════════════════════════════════════════════════╝
 ```
 
@@ -81,7 +81,7 @@
 <br/>
 
 <a href="https://ashasports.com/" target="_blank">
-  <img src="https://img.shields.io/badge/%F0%9F%9A%80%20%20VIEW%20LIVE%20WEBSITE-%20asha--sports--complex.vercel.app%20%20-39FF14?style=for-the-badge&logo=vercel&logoColor=black&labelColor=0d1117" height="45"/>
+  <img src="https://img.shields.io/badge/%F0%9F%9A%80%20%20VIEW%20LIVE%20WEBSITE-%20ashasports.com%20%20-39FF14?style=for-the-badge&logo=googlechrome&logoColor=black&labelColor=0d1117" height="45"/>
 </a>
 
 <br/><br/>
@@ -92,13 +92,13 @@
 
 | 🌐 Page | 🔗 Live URL |
 |:---|:---|
-| 🏠 **Home** | [asha-sports-complex.vercel.app](https://asha-sports-complex.vercel.app/) |
-| 📖 **About** | [.../pages/about.html](https://asha-sports-complex.vercel.app/pages/about.html) |
-| 🏅 **Sports** | [.../pages/sports.html](https://asha-sports-complex.vercel.app/pages/sports.html) |
-| 📋 **Programs** | [.../pages/programs.html](https://asha-sports-complex.vercel.app/pages/programs.html) |
-| 📝 **Admissions** | [.../pages/admission.html](https://asha-sports-complex.vercel.app/pages/admission.html) |
-| 🖼️ **Gallery** | [.../pages/gallery.html](https://asha-sports-complex.vercel.app/pages/gallery.html) |
-| 📞 **Contact** | [.../pages/contact.html](https://asha-sports-complex.vercel.app/pages/contact.html) |
+| 🏠 **Home** | [ashasports.com](https://ashasports.com/) |
+| 📖 **About** | [.../pages/about.html](https://ashasports.com/pages/about.html) |
+| 🏅 **Sports** | [.../pages/sports.html](https://ashasports.com/pages/sports.html) |
+| 📋 **Programs** | [.../pages/programs.html](https://ashasports.com/pages/programs.html) |
+| 📝 **Admissions** | [.../pages/admission.html](https://ashasports.com/pages/admission.html) |
+| 🖼️ **Gallery** | [.../pages/gallery.html](https://ashasports.com/pages/gallery.html) |
+| 📞 **Contact** | [.../pages/contact.html](https://ashasports.com/pages/contact.html) |
 
 </div>
 
@@ -287,18 +287,18 @@ asha-sports-complex/
 <!-- DEPLOYMENT SECTION -->
 <div align="center">
 
-## ☁️ Deployment — Vercel
+## ☁️ Deployment
 
 </div>
 
-This project is deployed on **[Vercel](https://vercel.com/)** with zero-config static hosting.
+This project is hosted as a **static website** on its own custom domain: **[ashasports.com](https://ashasports.com/)**
 
 ```
   ┌──────────────────────────────────────────────────────────────┐
   │                  🚀 DEPLOYMENT INFO                          │
   ├──────────────────────────────────────────────────────────────┤
-  │  Platform   →   Vercel (Static Hosting)                      │
-  │  Live URL   →   https://asha-sports-complex.vercel.app/      │
+  │  Platform   →   Static Hosting                               │
+  │  Live URL   →   https://ashasports.com/                      │
   │  Branch     →   main                                         │
   │  Status     →   ✅ Active & Live                             │
   │  Build      →   No build step (pure HTML/CSS/JS)             │
@@ -311,17 +311,13 @@ This project is deployed on **[Vercel](https://vercel.com/)** with zero-config s
 # 1. Fork & clone this repo
 git clone https://github.com/your-username/asha-sports-complex.git
 
-# 2. Install Vercel CLI (optional)
-npm install -g vercel
+# 2. Upload the project root to any static hosting provider
+#    (no build step needed)
 
-# 3. Deploy from project root
-vercel
-
-# OR — simply connect your GitHub repo on vercel.com
-# → Import Project → Select Repo → Deploy ✅
+# 3. Point your domain's DNS to your host ✅
 ```
 
-> 💡 No `package.json`, no build commands needed. Vercel auto-detects it as a **static site** and deploys instantly on every `git push`.
+> 💡 No `package.json`, no build commands needed. The site is a **pure static site** — just upload the files and it works.
 
 ---
 
@@ -369,7 +365,7 @@ open index.html
 
 <br/>
 
-<img src="https://skillicons.dev/icons?i=html,css,js,git,github,vscode,vercel&theme=dark" />
+<img src="https://skillicons.dev/icons?i=html,css,js,git,github,vscode&theme=dark" />
 
 <br/><br/>
 
@@ -381,7 +377,7 @@ open index.html
 | **Google Fonts** | Bebas Neue (display) + Poppins (body) |
 | **Canvas API** | Particle systems on hero, sports, coaches, events sections |
 | **Git** | Version control |
-| **Vercel** | Static site deployment & hosting |
+| **Static Hosting** | Deployed at [ashasports.com](https://ashasports.com/) |
 
 </div>
 
@@ -514,10 +510,10 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 | Platform | Link |
 |:---:|:---|
-| 🚀 **Live Site** | [asha-sports-complex.vercel.app](https://ashasports.com/) |
-| 🌐 **Website** | [www.ashasportscomplex.in](https://ashasports.com/) |
+| 🚀 **Live Site** | [ashasports.com](https://ashasports.com/) |
+| 🌐 **Website** | [ashasports.com](https://ashasports.com/) |
 | 📧 **Email** | info@ashasportscomplex.in |
-| 📍 **Location** | Hazaribagh, Jharkhand, India |
+| 📍 **Location** | JB Lawn, Jankipuram, Lucknow, Uttar Pradesh, India |
 | 📘 **Facebook** | [Asha Sports Complex](#) |
 | 📸 **Instagram** | [@ashasportscomplex](#) |
 
