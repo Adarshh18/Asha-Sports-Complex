@@ -19,7 +19,7 @@
 </p>
 
 <p>
-  <a href="https://asha-sports-complex.vercel.app/" target="_blank">
+  <a href="https://ashasports.com/" target="_blank">
     <img src="https://img.shields.io/badge/🚀%20Live%20Demo-asha--sports--complex.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
   <img src="https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
@@ -80,13 +80,13 @@
 
 <br/>
 
-<a href="https://asha-sports-complex.vercel.app/" target="_blank">
+<a href="https://ashasports.com/" target="_blank">
   <img src="https://img.shields.io/badge/%F0%9F%9A%80%20%20VIEW%20LIVE%20WEBSITE-%20asha--sports--complex.vercel.app%20%20-39FF14?style=for-the-badge&logo=vercel&logoColor=black&labelColor=0d1117" height="45"/>
 </a>
 
 <br/><br/>
 
-> 🔗 **[https://asha-sports-complex.vercel.app/](https://asha-sports-complex.vercel.app/)**
+> 🔗 **[https://ashasports.com/](https://ashasports.com/)**
 
 <br/>
 
@@ -514,8 +514,8 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 | Platform | Link |
 |:---:|:---|
-| 🚀 **Live Site** | [asha-sports-complex.vercel.app](https://asha-sports-complex.vercel.app/) |
-| 🌐 **Website** | [www.ashasportscomplex.in](https://www.ashasportscomplex.in) |
+| 🚀 **Live Site** | [asha-sports-complex.vercel.app](https://ashasports.com/) |
+| 🌐 **Website** | [www.ashasportscomplex.in](https://ashasports.com/) |
 | 📧 **Email** | info@ashasportscomplex.in |
 | 📍 **Location** | Hazaribagh, Jharkhand, India |
 | 📘 **Facebook** | [Asha Sports Complex](#) |
